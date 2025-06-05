@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links and Images</title>
+</head>
+<body>
+    <h1>Homepage</h1>
+    <h4>This link opens the page in this tab:</h4>
+    <a href="https://www.theodinproject.com/about">About The Odin Project</a>
+    <br>
+    <h4>This link opens the page in a new tab:</h4>
+    <a href="https://www.theodinproject.com/about" target="_blank" rel="noopener noreferrer">About The Odin Project</a>
+    <p><strong>noopener:</strong> The noopener value of the rel attribute ensures that a link opened in a new tab or window cannot interact with or access the original page. Without it, the new page can use JavaScript to manipulate the original page, which poses a security risk.</p>
+    <p>The <strong>noreferrer</strong> value of the rel attribute provides both privacy and security. It prevents the new page from knowing where the user came from (hiding the referrer) and also includes the behavior of noopener, preventing the new page from accessing the original page.</p>
+
+    <br>
+    <p>in line with good coding practices and to err on the side of caution, it is recommended to always pair a target="_blank" with a rel="noopener noreferrer".</p>
+    <a href="./pages/about.html">About</a>
+     <img src="https://www.theodinproject.com/mstile-310x310.png" alt="The Odin Project Logo" alt="The Odin Project Logo" height="155" width="155">
+</html>
