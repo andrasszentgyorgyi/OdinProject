@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user = {
+            name: "John",
+            surname: "Smith",
+        }
+        user.name = "Pete";
+        delete user.name;
+
+        //_---------
+
+        function isEmpty(obj){
+            let count = 0;
+            for(let prop in obj){
+                return false;
+            }
+            return true;
+        }
+
+        //--------
+        let salaries = {
+            John: 100,
+            Ann: 160,
+            Pete: 130
+        }
+        let sum = 0;
+        for(prop in salaries){
+            sum+=salaries[prop];
+        }
+
+        //--------
+
+        // before the call
+        let menu = {
+            width: 200,
+            height: 300,
+            title: "My menu"
+        };
+
+        function multiplyNumeric(obj){
+            for(prop in obj){
+                if (Number.isInteger(obj[prop])){
+                    obj[prop] = obj[prop]*2;
+                }
+            }
+        }
+
+        multiplyNumeric(menu);
+        for(prop in menu){
+            console.log(menu[prop]);
+        }
+
+    </script>
+</body>
+</html>
